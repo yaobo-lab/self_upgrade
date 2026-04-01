@@ -1,0 +1,29 @@
+[package]
+name = "self_upgrade"
+version = "1.0.0"
+edition = "2021"
+description = "Self upgrade for standalone executables"  
+license = "MIT"   
+authors = ["yaobos@outlook.com"]  
+repository = "https://github.com/yaobo-lab/self_upgrade"
+
+
+[dependencies]
+serde = { version = "1.0.228", features = ["derive"] }
+anyhow = "1.0.102"
+log = "0.4.29"
+kanal = "0.1.1" 
+fs_extra_rs ={version =  "1.0.0"} 
+tokio = { version = "1.50.0", default-features = false, features = [
+    "process", 
+]}
+toolkit-rs={  version = '1.0.24', features = ["logger"]}
+downloader ={version =  "1.0.9",package = "downloader-http-rs"}
+async-trait = "0.1.89"
+semver = "1.0"
+self-replace = "1"
+
+ 
+[dev-dependencies] 
+tokio = { version = "1.44.2",  features = [ "full"] }
+toolkit-rs={  version = '1.0.22' }
